@@ -1,0 +1,17 @@
+{
+  "MapName" : "4: Saitek ProFlight Rudder Pedals",
+  "MapImage" : "proflightpedals.jpg",
+  "InputDevices" :[
+  { 
+    "InputType": "J",
+    "DeviceName": "Saitek ProFlight Rudder Pedals",
+    "DeviceProdGuid": ["{076306A3-0000-0000-0000-504944564944}",
+                       "{076506A3-0000-0000-0000-504944564944}"],
+    "Controls": [
+      { "Input" : "rotz", "Type" : "Analogue", "X" : 1208, "Y" : 331, "Width" : 1331, "Height" : 161, "Cmt" : "Rudder" },
+      { "Input" : "x", "Type" : "Analogue", "X" : 164, "Y" : 588, "Width" : 1331, "Height" : 161, "Cmt" : "Left pedal" },
+      { "Input" : "y", "Type" : "Analogue", "X" : 2264, "Y" : 588, "Width" : 1331, "Height" : 161, "Cmt" : "Right pedal" }
+    ]
+  }
+  ]
+}

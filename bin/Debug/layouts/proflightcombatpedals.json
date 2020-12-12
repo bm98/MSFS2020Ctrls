@@ -1,0 +1,16 @@
+{
+  "MapName" : "4: Saitek ProFlight Combat Rudder Pedals",
+  "MapImage" : "proflightcombatpedals.jpg",
+  "InputDevices" :[
+  { 
+    "InputType": "J",
+    "DeviceName": "Saitek ProFlight Combat Rudder Pedals",
+    "DeviceProdGuid": ["{076406A3-0000-0000-0000-504944564944}"],
+    "Controls": [
+      { "Input" : "rotz", "Type" : "Analogue", "X" : 1208, "Y" : 331, "Width" : 1331, "Height" : 161, "Cmt" : "Rudder" },
+      { "Input" : "x", "Type" : "Analogue", "X" : 164, "Y" : 588, "Width" : 1331, "Height" : 161, "Cmt" : "Left pedal" },
+      { "Input" : "y", "Type" : "Analogue", "X" : 2264, "Y" : 588, "Width" : 1331, "Height" : 161, "Cmt" : "Right pedal" }
+    ]
+  }
+  ]
+}

@@ -1,0 +1,11 @@
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.Layout.FormLayout.resources
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.Properties.Resources.resources
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.csproj.GenerateResource.cache
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.csproj.CoreCompileInputs.cache
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\bin\Debug\MSFS2020Ctrls.exe.config
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\bin\Debug\MSFS2020Ctrls.exe
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\bin\Debug\MSFS2020Ctrls.pdb
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.exe
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.pdb
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.FrmMain.resources
+G:\AA_DEVELOP\GitHub\bm98\FSim\MSFS2020Ctrls\MSFS2020Ctrls\obj\Debug\MSFS2020Ctrls.FrmPrint.resources
