@@ -1,0 +1,68 @@
+{
+  "MapName" : "1: T.16000M DUO Joystick (left - right)",
+  "MapImage" : "t16000mduo-left-right.jpg",
+  "InputDevices" :[
+  { 
+    "InputType": "J1",
+    "DeviceName": "T.16000M Joystick - left",
+    "DeviceProdGuid": ["{B10A044F-0000-0000-0000-504944564944}"],
+    "Controls": [
+      { "Input" : "button1", "Type" : "Digital", "X" : 1299, "Y" : 793, "Width" : 537, "Height" : 95, "Cmt" : "" },
+      { "Input" : "button2", "Type" : "Digital", "X" : 138, "Y" : 727, "Width" : 757, "Height" : 41, "Cmt" : "" },
+      { "Input" : "button3", "Type" : "Digital", "X" : 140, "Y" : 509, "Width" : 757, "Height" : 41, "Cmt" : "" },
+      { "Input" : "button4", "Type" : "Digital", "X" : 1268, "Y" : 590, "Width" : 756, "Height" : 40, "Cmt" : "" },
+      { "Input" : "button5", "Type" : "Digital", "X" : 1272, "Y" : 1057, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button6", "Type" : "Digital", "X" : 1272, "Y" : 1108, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button7", "Type" : "Digital", "X" : 1272, "Y" : 1159, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button8", "Type" : "Digital", "X" : 1595, "Y" : 1450, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button9", "Type" : "Digital", "X" : 1595, "Y" : 1399, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button10", "Type" : "Digital", "X" : 1595, "Y" : 1348, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button11", "Type" : "Digital", "X" : 17, "Y" : 1114, "Width" : 647, "Height" : 45, "Cmt" : "" },
+      { "Input" : "button12", "Type" : "Digital", "X" : 17, "Y" : 1164, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button13", "Type" : "Digital", "X" : 17, "Y" : 1215, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button14", "Type" : "Digital", "X" : 17, "Y" : 1731, "Width" : 646, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button15", "Type" : "Digital", "X" : 17, "Y" : 1679, "Width" : 646, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button16", "Type" : "Digital", "X" : 17, "Y" : 1629, "Width" : 646, "Height" : 46, "Cmt" : "" },
+      { "Input" : "hat1_up", "Type" : "Digital", "X" : 728, "Y" : 230, "Width" : 756, "Height" : 46, "Cmt" : "POV1 up" },
+      { "Input" : "hat1_right", "Type" : "Digital", "X" : 728, "Y" : 281, "Width" : 756, "Height" : 48, "Cmt" : "POV1 right" },
+      { "Input" : "hat1_down", "Type" : "Digital", "X" : 728, "Y" : 334, "Width" : 756, "Height" : 46, "Cmt" : "POV1 down" },
+      { "Input" : "hat1_left", "Type" : "Digital", "X" : 728, "Y" : 385, "Width" : 756, "Height" : 47, "Cmt" : "POV1 left" },
+      { "Input" : "rotz", "Type" : "Analogue", "X" : 134, "Y" : 983, "Width" : 756, "Height" : 47, "Cmt" : "RotZ-Axis" },
+      { "Input" : "x", "Type" : "Analogue", "X" : 134, "Y" : 932, "Width" : 756, "Height" : 46, "Cmt" : "X-Axis" },
+      { "Input" : "y", "Type" : "Analogue", "X" : 134, "Y" : 881, "Width" : 756, "Height" : 46, "Cmt" : "Y-Axis" },
+      { "Input" : "slider1", "Type" : "Analogue", "X" : 711, "Y" : 1824, "Width" : 757, "Height" : 41, "Cmt" : "U-Axis" }
+    ]
+  },
+  { 
+    "InputType": "J2",
+    "DeviceName": "T.16000M Joystick - right",
+    "DeviceProdGuid": ["{B10A044F-0000-0000-0000-504944564944}"],
+    "Controls": [
+      { "Input" : "button1", "Type" : "Digital", "X" : 1998, "Y" : 793, "Width" : 537, "Height" : 95, "Cmt" : "" },
+      { "Input" : "button2", "Type" : "Digital", "X" : 2916, "Y" : 727, "Width" : 757, "Height" : 41, "Cmt" : "" },
+      { "Input" : "button3", "Type" : "Digital", "X" : 1815, "Y" : 509, "Width" : 757, "Height" : 41, "Cmt" : "" },
+      { "Input" : "button4", "Type" : "Digital", "X" : 2910, "Y" : 509, "Width" : 757, "Height" : 41, "Cmt" : "" },
+      { "Input" : "button5", "Type" : "Digital", "X" : 1933, "Y" : 953, "Width" : 647, "Height" : 45, "Cmt" : "" },
+      { "Input" : "button6", "Type" : "Digital", "X" : 1933, "Y" : 1003, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button7", "Type" : "Digital", "X" : 1933, "Y" : 1054, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button8", "Type" : "Digital", "X" : 1618, "Y" : 1677, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button9", "Type" : "Digital", "X" : 1618, "Y" : 1626, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button10", "Type" : "Digital", "X" : 1618, "Y" : 1575, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button11", "Type" : "Digital", "X" : 3165, "Y" : 1123, "Width" : 647, "Height" : 45, "Cmt" : "" },
+      { "Input" : "button12", "Type" : "Digital", "X" : 3165, "Y" : 1173, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button13", "Type" : "Digital", "X" : 3165, "Y" : 1224, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button14", "Type" : "Digital", "X" : 3166, "Y" : 1722, "Width" : 647, "Height" : 47, "Cmt" : "" },
+      { "Input" : "button15", "Type" : "Digital", "X" : 3166, "Y" : 1671, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "button16", "Type" : "Digital", "X" : 3166, "Y" : 1620, "Width" : 647, "Height" : 46, "Cmt" : "" },
+      { "Input" : "hat1_up", "Type" : "Digital", "X" : 2395, "Y" : 230, "Width" : 757, "Height" : 46, "Cmt" : "POV1 up" },
+      { "Input" : "hat1_right", "Type" : "Digital", "X" : 2395, "Y" : 281, "Width" : 757, "Height" : 48, "Cmt" : "POV1 right" },
+      { "Input" : "hat1_down", "Type" : "Digital", "X" : 2395, "Y" : 334, "Width" : 757, "Height" : 46, "Cmt" : "POV1 down" },
+      { "Input" : "hat1_left", "Type" : "Digital", "X" : 2395, "Y" : 385, "Width" : 757, "Height" : 47, "Cmt" : "POV1 left" },
+      { "Input" : "rotz", "Type" : "Analogue", "X" : 2983, "Y" : 995, "Width" : 757, "Height" : 47, "Cmt" : "RotZ-Axis" },
+      { "Input" : "x", "Type" : "Analogue", "X" : 2983, "Y" : 944, "Width" : 757, "Height" : 46, "Cmt" : "X-Axis" },
+      { "Input" : "y", "Type" : "Analogue", "X" : 2983, "Y" : 893, "Width" : 757, "Height" : 46, "Cmt" : "Y-Axis" },
+      { "Input" : "slider1", "Type" : "Analogue", "X" : 2383, "Y" : 1824, "Width" : 757, "Height" : 41, "Cmt" : "U-Axis" }
+    ]
+  }
+  ]
+}
