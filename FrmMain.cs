@@ -63,6 +63,14 @@ namespace MSFS2020Ctrls
       //lblTitle.Text += " - V " + version.Substring( 0, version.IndexOf( ".", version.IndexOf( "." ) + 1 ) ); // PRODUCTION
       this.Text += " - V " + version + " beta"; // BETA
 
+      // set the one from the kbd driver if found
+      bool exists = Support.KbdLayout.Instance.KbdLayoutExists(Support.InputTransform.KbdLayoutID);
+      Support.KbdLayout.Instance.SetKbdLayout( Support.InputTransform.KbdLayoutID ); // gets the default one if not found
+      if ( exists )
+        lblLang.Text = Support.InputTransform.LocaleString;
+      else
+        lblLang.Text = "("+Support.InputTransform.LocaleString+")";
+
       btLoad.Focus( );
 
     }
@@ -142,5 +150,20 @@ namespace MSFS2020Ctrls
       PRINT = null;
     }
 
+    private void button1_Click( object sender, EventArgs e )
+    {
+      Support.KeyboardCls.MyLayoutName( );
+    }
+
+    private void button1_Click_1( object sender, EventArgs e )
+    {
+      var kle = new Support.KLE_File();
+      var x = new Support.KbdLayoutFile();
+      x.MapKLIDs = new List<string>( ) { "00000411" };
+      x.MapDescription = "Keyboard Layout for ja";
+      x.MapComment = "Japanese Layout";
+      x.MapKeys= kle.GetKeyLabels( "KBDJPN.json" );
+      x.ToJson( "ja.json" );
+    }
   }
 }

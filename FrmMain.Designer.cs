@@ -39,12 +39,14 @@ namespace MSFS2020Ctrls
       this.btPrint = new System.Windows.Forms.Button();
       this.btLoad = new System.Windows.Forms.Button();
       this.btShowForm = new System.Windows.Forms.Button();
+      this.label5 = new System.Windows.Forms.Label();
+      this.lblLang = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
       // cbxLang
       // 
       this.cbxLang.FormattingEnabled = true;
-      this.cbxLang.Location = new System.Drawing.Point(479, 39);
+      this.cbxLang.Location = new System.Drawing.Point(482, 28);
       this.cbxLang.Name = "cbxLang";
       this.cbxLang.Size = new System.Drawing.Size(87, 21);
       this.cbxLang.Sorted = true;
@@ -152,12 +154,32 @@ namespace MSFS2020Ctrls
       this.btShowForm.UseVisualStyleBackColor = true;
       this.btShowForm.Click += new System.EventHandler(this.btShowForm_Click);
       // 
+      // label5
+      // 
+      this.label5.AutoSize = true;
+      this.label5.Location = new System.Drawing.Point(457, 65);
+      this.label5.Name = "label5";
+      this.label5.Size = new System.Drawing.Size(117, 13);
+      this.label5.TabIndex = 14;
+      this.label5.Text = "Use Keyboard Layout:";
+      // 
+      // lblLang
+      // 
+      this.lblLang.AutoSize = true;
+      this.lblLang.Location = new System.Drawing.Point(479, 85);
+      this.lblLang.Name = "lblLang";
+      this.lblLang.Size = new System.Drawing.Size(41, 13);
+      this.lblLang.TabIndex = 14;
+      this.lblLang.Text = "Use Ke";
+      // 
       // FrmMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
       this.ClientSize = new System.Drawing.Size(585, 602);
+      this.Controls.Add(this.lblLang);
+      this.Controls.Add(this.label5);
       this.Controls.Add(this.btPrint);
       this.Controls.Add(this.label4);
       this.Controls.Add(this.label3);
@@ -191,6 +213,8 @@ namespace MSFS2020Ctrls
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button btPrint;
+    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label lblLang;
   }
 }
 

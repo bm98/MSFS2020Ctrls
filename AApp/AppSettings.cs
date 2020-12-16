@@ -59,8 +59,7 @@ namespace MSFS2020Ctrls
 
     [UserScopedSetting( )]
     [DefaultSettingValue( "en-US" )] // just a default
-    public string MyLanguageChoice
-    {
+    public string MyLanguageChoice {
       get { return (string)this["MyLanguageChoice"]; }
       set { this["MyLanguageChoice"] = value; }
     }

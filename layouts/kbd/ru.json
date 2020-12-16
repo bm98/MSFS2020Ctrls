@@ -1,0 +1,13 @@
+{
+  "Comment":"Russian Layout",
+  "Description":"Keyboard Layout for ru",
+  "KLID":["00000419"],
+  "Map":[
+    "Esc","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12","PrtSc","Scroll Lock","Pause",
+    "ё","1","2","3","4","5","6","7","8₽","9","0","-","=","Backspace","Insert","Home","Page Up","Num Lock","/","*","-",
+    "Tab","й","ц","у","к","е","н","г","ш","щ","з","х","ъ","Enter","Delete","End","Page Down","7","8","9","+",
+    "Caps Lock","ф","ы","в","а","п","р","о","л","д","ж","э","\\\\","4","5","6",
+    "Shift","\\\\","я","ч","с","м","и","т","ь","б","ю",".","Shift","↑","1","2","3","Enter",
+    "Ctrl","Win","Alt","Space","AltGr","Win","Menu","Ctrl","←","↓","→","0",","
+  ]
+}

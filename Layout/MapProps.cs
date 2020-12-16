@@ -91,7 +91,12 @@ namespace MSFS2020Ctrls.Layout
 
     // Keyboard Layout Text 
     private const string c_kbdFontFamily = "Gill Sans Nova Cond";
-    private static Font m_kbdFont = new Font( c_kbdFontFamily, m_fontSize ); // real fontsize will be scaled to float but not used outside
+    private static Font m_kbdFont = new Font( c_kbdFontFamily, m_fontSize, FontStyle.Bold ); // real fontsize will be scaled to float but not used outside
+
+    // Keyboard Label Text 
+    private const string c_kbdLabelFontFamily = "Verdana";
+    private static Font m_kbdLabelFont = new Font( c_kbdLabelFontFamily, 24 , FontStyle.Bold);
+    private static Brush m_kbdLabelBrush = Brushes.BlueViolet;
 
     // Keyboard Symbols
     private const string c_kbdSymbolFontFamily = "Tahoma";
@@ -279,6 +284,9 @@ namespace MSFS2020Ctrls.Layout
     public static Brush KbdSymbolBrush { get => m_kbdSymbolBrush; }
     public static Pen KbdSymbolPen { get => m_kbdSymbolPen; }
 
+    // Keyboard Labels
+    public static Font KbdLabelFont { get => m_kbdLabelFont; }
+    public static Brush KbdLabelBrush { get => m_kbdLabelBrush; }
 
   }
 }

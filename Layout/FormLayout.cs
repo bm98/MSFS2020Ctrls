@@ -347,26 +347,30 @@ namespace MSFS2020Ctrls.Layout
         return;
       }
 
-      ( cbxLayouts.SelectedItem as DeviceLayout ).DeviceController.CreateShapes( );
+      var devController=( cbxLayouts.SelectedItem as DeviceLayout ).DeviceController;
+      devController.CreateShapes( );
+      devController.LoadKeyLabels( m_displayList );
       foreach ( var actItem in ActionList ) {
         // matches the selected device      
         if ( MatchCriteria( actItem ) ) {
           bool firstInstance = ActionList.IsFirstInstance( actItem.DevicePidVid, actItem.InputTypeNumber );
-          var ctrl = ( cbxLayouts.SelectedItem as DeviceLayout ).DeviceController.FindItem( actItem.DevicePidVid, actItem.MainControl, firstInstance );
+          var ctrl = devController.FindItem( actItem.DevicePidVid, actItem.MainControl, firstInstance );
           if ( ctrl == null && actItem.InputTypeLetter == "J" ) {
             // for joysticks try the generic one
-            ctrl = ( cbxLayouts.SelectedItem as DeviceLayout ).DeviceController.FindItem( "20002000", actItem.MainControl, firstInstance );
+            ctrl = devController.FindItem( "20002000", actItem.MainControl, firstInstance );
           }
           if ( ctrl != null ) {
             if ( ctrl.ShapeItems.Count > 0 ) {
               var shape = ctrl.ShapeItems.Dequeue( );
+              if (shape is ShapeKey ) {
+                ( shape as ShapeKey ).SCGameKey = actItem.MainControl; // content
+                shape.DispText = "DUMMY"; // else it is ignored.. TODO make this better...
+                m_displayList.Add( shape );
+                shape = ctrl.ShapeItems.Dequeue( ); // pull one more if we got a non text shape
+              }
               shape.DispText = actItem.ModdedDispText;
               shape.TextColor = MapProps.MapForeColor( actItem.ActionMap );
               shape.BackColor = MapProps.MapBackColor( actItem.ActionMap );
-              if ( shape is ShapeKey ) {
-                // kbd map
-                ( shape as ShapeKey ).SCGameKey = actItem.MainControl;
-              }
               m_displayList.Add( shape );
             }
             else {

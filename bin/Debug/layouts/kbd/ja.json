@@ -1,0 +1,13 @@
+{
+  "Comment":"Japanese Layout",
+  "Description":"Keyboard Layout for ja",
+  "KLID":["00000411"],
+  "Map":[
+    "Esc","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12","PrtSc","Scroll Lock","Pause",
+    "`","1","2","3","4","5","6","7","8","9","0","-","=","Backspace","Insert","Home","Page Up","Num Lock","/","*","-",
+    "Tab","qﾀ","wﾃ","eｲ","rｽ","tｶ","yﾝ","uﾅ","iﾆ","oﾗ","pｾ","[","]","Enter","Delete","End","Page Down","7","8","9","+",
+    "Caps Lock","aﾁ","sﾄ","dｼ","fﾊ","gｷ","hｸ","jﾏ","kﾉ","lﾘ",";ﾚ","'ｹ","\\","4","5","6",
+    "Shift","\\ﾑ","zﾂ","xｻ","cｿ","vﾋ","bｺ","nﾐ","mﾓ",",ﾈ",".ﾙ","/ﾒ","Shift","↑","1","2","3","Enter",
+    "Ctrl","Win","Alt","Space","AltGr","Win","Menu","Ctrl","←","↓","→","0","."
+  ]
+}

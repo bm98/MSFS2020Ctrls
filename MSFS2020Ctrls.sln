@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{E252DC2C-39D4-44F9-9C07-7E8F795842AF}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		Doc\MSFS2020Ctrls_QGuide V1.x.pub = Doc\MSFS2020Ctrls_QGuide V1.x.pub
 		README.md = README.md
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection

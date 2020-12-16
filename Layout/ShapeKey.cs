@@ -5,8 +5,9 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using MSFS2020Ctrls.Support;
+using static MSFS2020Ctrls.Support.InputTransform;
 using static MSFS2020Ctrls.Support.KeyboardCls;
 
 namespace MSFS2020Ctrls.Layout
@@ -26,22 +27,25 @@ namespace MSFS2020Ctrls.Layout
     /// <summary>
     /// The DX GameKey for this Command
     /// </summary>
-    public DXKey DXGameKey
-    {
+    public DxKey DXGameKey {
       get {
-        return KeyboardCls.FromSCKeyboardCmd( SCGameKey );
+        return DxKeyFromCryLiteral( SCGameKey );
       }
     }
 
     /// <summary>
     /// The Windows Virtual GameKey for this Command
     /// </summary>
-    public VirtualKey WinVirtualKey
-    {
+    public Keys WinVirtualKey {
       get {
-        return (VirtualKey)WinApi.MapVirtualKeyEx( (uint)DXGameKey, WinApi.VirtualKeyMapType.MAPVK_VSC_TO_VK_EX, IntPtr.Zero );
+        return VirtualKeyFromDxKey( DXGameKey );
       }
     }
+
+    /// <summary>
+    /// Indicates that the Key Label needs to be drawn
+    /// </summary>
+    public bool IsLabelShape { get; set; } = false; // default
 
     /// <summary>
     /// Indicates that the Key symbol needs to be drawn
@@ -106,7 +110,7 @@ namespace MSFS2020Ctrls.Layout
 
       // define the pen
       var pen = new Pen( color, 1 );
-      pen.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+      pen.Alignment = PenAlignment.Center;
 
       // get the corner path
       var path = new GraphicsPath( );
@@ -123,6 +127,9 @@ namespace MSFS2020Ctrls.Layout
         GetRoundRectPath( ref path, r, dia ); // get the path
         pGraphics.DrawPath( pen, path );  // draw the round rect
       }
+      path.Dispose( );
+      pen.Dispose( );
+
       // restore page unit
       pGraphics.PageUnit = oldPageUnit;
     }
@@ -135,7 +142,7 @@ namespace MSFS2020Ctrls.Layout
     /// <param name="key"></param>
     private void DrawKey( Graphics g, Rectangle drawRect, string key )
     {
-      var printSize =Size.Add( Size.Ceiling( g.MeasureString( key, MapProps.MapFont ) ), new Size(18,18)); // get the surounding box for the Text 
+      var printSize = Size.Add( Size.Ceiling( g.MeasureString( key, MapProps.MapFont ) ), new Size(18,18)); // get the surounding box for the Text 
       var rect = new Rectangle( drawRect.Location, printSize );
       rect.Offset( 0, ( drawRect.Height - printSize.Height ) / 2 ); // try to find the middle by shifting the drawing
       if ( rect.Width < rect.Height ) rect.Width = rect.Height; // minimum with
@@ -146,6 +153,24 @@ namespace MSFS2020Ctrls.Layout
       g.DrawString( key, MapProps.MapFont, MapProps.KbdSymbolBrush, rect ); // write into the rectangle
     }
 
+    /// <summary>
+    /// Draw the Key Label in the top left corner of the Key rectagle
+    /// </summary>
+    /// <param name="g">Graphics context</param>
+    /// <param name="drawRect">The key label recangle</param>
+    /// <param name="key">the string to write</param>
+    private void DrawKeyLabel( Graphics g, Rectangle drawRect, string key )
+    {
+      // top right corner it is
+      // get the width with a given text and font
+      Rectangle printRect = drawRect;
+      Size printSize = Size.Add( Size.Ceiling( g.MeasureString( key, MapProps.KbdLabelFont ) ), new Size(2,0)); // get the surounding box for the Text 
+      printRect.X += drawRect.Width - printSize.Width;
+      printRect.Y -= printSize.Height; // shift it up as the rect is below the keylabel
+      printRect.Width = printSize.Width;
+      printRect.Height = printSize.Height;
+      g.DrawString( key, MapProps.KbdLabelFont, MapProps.KbdLabelBrush, printRect ); // write into the rectangle
+    }
     #region IShape Implementation
 
     /// <summary>
@@ -154,13 +179,19 @@ namespace MSFS2020Ctrls.Layout
     public override void DrawShape( Graphics g )
     {
       // Key Symbol left of the Text Location
-      if ( IsValid ) {
+      if ( IsValid && IsSymbolShape ) {
         var symbolRect = Rectangle;
         symbolRect.Offset( -120, 0 ); // TODO  get a proper left offset rather than static (Should be left aligned though..)
         symbolRect.Width = 120;
-        string key = WinApi.FSimCodeToVK((uint)DXGameKey); // might work....
- //       string key = WinApi.KbdScanCodeToVK((uint)DXGameKey); // might work....
-        if (IsSymbolShape) DrawKey( g, symbolRect, key );
+        //       string key = WinApi.KbdScanCodeToVK((uint)DXGameKey); // might work....
+        string key = KbdLayout.Instance.LabelForDxKey(DXGameKey); // might work....
+        DrawKey( g, symbolRect, key );
+        return; // only draw the symbol
+      }
+      else if ( IsValid && IsLabelShape ) {
+        string key = KbdLayout.Instance.LabelForDxKey(DXGameKey); // might work....
+        DrawKeyLabel(g, Rectangle, key );
+        return; // Only draw the label
       }
       // draw the text
       base.DrawShape( g );

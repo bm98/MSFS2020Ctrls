@@ -113,7 +113,7 @@ namespace MSFS2020Ctrls.MSFS
         if ( ret.Length > 0 ) {
           ;// stop
         }
-        ret = Support.KeyboardCls.FromWinKeyboardCmd( keys, true, false );
+        ret =Support.InputTransform.CryCommandFromVirtualKeyList( keys, true, false );
         Console.WriteLine( ret );
       }
       return ret;

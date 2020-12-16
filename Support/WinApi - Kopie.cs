@@ -9,7 +9,7 @@ using static MSFS2020Ctrls.Support.KeyboardCls;
 
 namespace MSFS2020Ctrls.Support
 {
-  static class WinApi
+  static class WinApiOLD
   {
     public const string LibraryName = "user32";
 
